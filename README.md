@@ -4,6 +4,8 @@ Claude AI Chat UI using Vercel AI SDK.
 
 Vercel AI SDK を利用して作成された、Anthropic API を介して Claude 3 AI とチャットするための簡易 UI です。
 
+- [Claude - Anthropic](https://www.anthropic.com/claude)
+- [Anthropic API Getting started](https://docs.anthropic.com/claude/reference/getting-started-with-the-api)
 - [Vercel AI SDK](https://github.com/vercel/ai)
 - [anthropic-sdk-typescript](https://github.com/anthropics/anthropic-sdk-typescript)
 - [Next.js](https://nextjs.org/)
