@@ -2,32 +2,68 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+@layer components {
+  html {
+    @apply scroll-smooth;
   }
-}
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
+  body {
+    @apply min-h-dvh flex flex-col bg-gray-900 text-white/90;
+  }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  main {
+    @apply flex flex-col grow justify-between p-10;
+  }
+
+  .block__chat {
+    @apply h-full space-y-10 w-full max-w-5xl mx-auto;
+
+    .chat-item {
+      @apply space-y-4;
+    }
+
+    .chat-label {
+      @apply flex items-center gap-4;
+    }
+
+    .chat-icon {
+      @apply size-6 rounded-full bg-white text-gray-800 flex justify-center items-center;
+
+      svg {
+        @apply size-4;
+      }
+
+      &.user {
+        @apply bg-emerald-200;
+      }
+
+      &.ai {
+        @apply bg-[#CC785C] text-white;
+      }
+    }
+
+    .chat-content {
+        @apply prose prose-invert text-white/90 prose-a:underline prose-a:text-white prose-a:hover:no-underline max-w-none;
+      }
+  }
+
+  .block__form {
+    @apply w-full max-w-5xl mx-auto mt-16;
+
+    form {
+      @apply space-y-4;
+    }
+
+    textarea {
+      @apply block w-full rounded-md border-0 bg-white/5 py-1.5 px-2 text-white shadow-sm ring-1 ring-inset ring-white/10 sm:text-sm sm:leading-6;
+    }
+
+    button {
+      @apply inline-flex items-center gap-x-2 rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600;
+
+      svg {
+        @apply size-4;
+      }
+    }
   }
 }
