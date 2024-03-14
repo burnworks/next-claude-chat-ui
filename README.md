@@ -28,7 +28,7 @@ npm install
 # API Key (Required)
 ANTHROPIC_API_KEY=[ここに API Key を記述]
 
-# claude-3-opus-20240229 or claude-3-sonnet-20240229 (Default)
+# claude-3-opus-20240229 or claude-3-sonnet-20240229 (Default) or claude-3-haiku-20240307
 ANTHROPIC_MODEL=
 ```
 `ANTHROPIC_MODEL` にセットできるモデル名は現時点で下記の3種類です。モデルごとに API の利用金額が異なりますので、用途に合わせて選択してください。
